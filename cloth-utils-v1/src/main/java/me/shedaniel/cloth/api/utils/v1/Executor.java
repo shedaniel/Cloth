@@ -82,4 +82,8 @@ public final class Executor {
             }
         return Optional.empty();
     }
+
+    public static ModExecutor getModExecutor(String modid) {
+        return ModExecutor.EXECUTOR_MAP.getOrDefault(modid, new ModExecutor(modid));
+    }
 }
